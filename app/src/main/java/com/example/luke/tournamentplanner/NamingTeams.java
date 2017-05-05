@@ -2,9 +2,7 @@ package com.example.luke.tournamentplanner;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -26,7 +24,6 @@ public class NamingTeams extends AppCompatActivity {
     private ListView list;
     public static final String EXTRA_MESSAGE = "com.example.luke.tournamentplanner.MESSAGE";
 
-    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +62,7 @@ public class NamingTeams extends AppCompatActivity {
                     editText.getText().clear();
                 } else {
                     editText.getText().clear();
-                    Toast.makeText(getApplicationContext(),"Capacity reached!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Capactiy reached!", Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -73,7 +70,7 @@ public class NamingTeams extends AppCompatActivity {
 
 
         //creating the confirmation button at the bottom of the screen
-        Button confirmBtn = (Button)findViewById(R.id.confirmButton);
+        Button confirmBtn = (Button)findViewById(R.id.next);
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +88,8 @@ public class NamingTeams extends AppCompatActivity {
                 //notifyDataSetChanged();
             }
         });
+
+
 
         
     }
