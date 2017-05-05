@@ -48,7 +48,7 @@ public class bracket extends AppCompatActivity implements AdapterView.OnItemSele
             type = Type.QUICKPLAY;
         }
         else{
-            type = Type.QUICKPLAY;
+            type = Type.DOUBLEELIMINATION;
         }
         //from here set up a tournament based upon the selected choice
         //also we need to make a view of the finalized teams
